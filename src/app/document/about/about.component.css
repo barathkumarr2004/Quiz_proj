@@ -1,0 +1,44 @@
+.about {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .about h1 {
+    font-size: 2em;
+    color: #333;
+  }
+  
+  .about p {
+    font-size: 1.2em;
+    color: #666;
+  }
+
+  .extra-about {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .extra-about h1 {
+    font-size: 2em;
+    color: #333;
+  }
+  
+  .extra-about p, .extra-about ul {
+    font-size: 1.2em;
+    color: #666;
+    margin: 0 auto;
+    max-width: 600px;
+    text-align: left;
+  }
+  
+  .extra-about h2 {
+    font-size: 1.5em;
+    color: #444;
+    margin-top: 20px;
+  }
+  
+  .extra-about ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  

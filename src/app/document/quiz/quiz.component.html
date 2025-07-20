@@ -1,0 +1,20 @@
+<div class="quiz-container">
+  <div class="quiz-header">
+    <h2>Question {{ currentQuestion + 1 }} of {{ questions.length }}</h2>
+    <div class="timer">Time Left: {{ timeLeft }}s</div>
+  </div>
+  <div class="question">
+    <h3>{{ questions[currentQuestion].question }}</h3>
+    <ul class="options">
+      <li class="option" *ngFor="let option of questions[currentQuestion].options"
+          [class.selected]="selectedOption === option"
+          (click)="selectOption(option)">
+        <input type="radio" [value]="option" name="option" id="{{ option }}" />
+        <label for="{{ option }}">{{ option }}</label>
+      </li>
+    </ul>
+  </div>
+  <div class="button-container">
+    <button class="next-button" (click)="nextQuestion()" [disabled]="!selectedOption">Next</button>
+  </div>
+</div>

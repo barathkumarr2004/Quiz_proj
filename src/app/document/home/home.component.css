@@ -1,0 +1,81 @@
+/* home.component.css */
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200vh;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0-haRUeNTtnd3xxHW_wfbF9LM5A5ckpiNMA&s'); 
+  background-size: cover;
+  color: white; 
+  text-align: center; 
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  text-align: center;
+  color: white;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  margin: 20px;
+}
+
+.home-container h1 {
+  background-image: url('https://static.vecteezy.com/system/resources/previews/029/897/337/non_2x/comic-speech-bubbles-with-text-quiz-night-neon-icon-symbol-sticker-tag-special-offer-label-advertising-badge-stock-illustration-vector.jpg');
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.home-container button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 8px;
+  background-color: #007bff;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.home-container button:hover {
+  background-color: #0056b3;
+}
+
+.hero-image {
+  height: 50vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.hero-text h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 20px;
+}
+

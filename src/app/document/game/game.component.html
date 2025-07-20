@@ -1,0 +1,39 @@
+<div class="quiz-container" *ngIf="!isLoading && !showResult; else resultTemplate">
+  <div class="header">
+    <div class="timer">Time Left: {{ timeLeft }}s</div>
+    <div class="score">Score: {{ score }}</div>
+  </div>
+  <div class="progress-bar">
+    <div class="progress" [style.width.%]="(currentIndex / questions.length) * 100"></div>
+  </div>
+  <h2 [@fadeInOut]>{{ currentQuestion.question }}</h2>
+  <ul>
+    <li *ngFor="let option of combinedOptions" 
+        [@fadeInOut]
+        [class.correct]="selectedOption === option && option === currentQuestion.correct_answer"
+        [class.incorrect]="selectedOption === option && option !== currentQuestion.correct_answer"
+        (click)="selectOption(option)">
+      {{ option }}
+    </li>
+  </ul>
+</div>
+  <ng-template #resultTemplate>
+    <div *ngIf="showResult">
+      <h2>Your Score: {{ score }}/{{ questions.length }}</h2>
+    </div>
+  </ng-template>
+  <ng-template #resultTemplate>
+    <div class="result-container" *ngIf="showResult">
+      <h2>Your Score: {{ score }}/{{ questions.length }}</h2>
+      <p>Great job! Here are some details about your performance:</p>
+      <ul>
+        <li>Total Questions: {{ questions.length }}</li>
+        <li>Correct Answers: {{ score }}</li>
+        <li>Accuracy: {{ (score / questions.length) * 100 | number:'1.0-2' }}%</li>
+      </ul>
+      <button (click)="restartQuiz()">Restart Quiz</button>
+    </div>
+  </ng-template>
+  
+
+  
